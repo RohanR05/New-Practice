@@ -7,7 +7,12 @@ const hanldaDataLoad = () => {
     });
 };
 
-const displayUser = (user) => {
-  console.log(user[0]);
-  console.log("total user", user.length);
+const displayUser = (users) => {
+  const userContainer = document.getElementById("lolo");
+
+  for (const user of users) {
+    const li = document.createElement("li");
+    li.innerText = user.name;
+    userContainer.appendChild(li);
+  }
 };
