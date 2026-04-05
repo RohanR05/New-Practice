@@ -15,9 +15,9 @@ const displayUser = (users) => {
   div.classList.add("card");
   div.innerHTML=`
   <div>  <p>${user.id}</p>
-  <p>${user.name}</p>
-  <p>${user.company.name}</p>
-  <p>${user.email}</p>
+  <p>Name: ${user.name}</p>
+  <p>Company Name: ${user.company.name}</p>
+  <p>Email: ${user.email}</p>
   </div>
 
   `
