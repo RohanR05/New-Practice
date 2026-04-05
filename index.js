@@ -8,11 +8,19 @@ const hanldaDataLoad = () => {
 };
 
 const displayUser = (users) => {
-  const userContainer = document.getElementById("lolo");
+ const container=document.getElementById("divvv");
 
-  for (const user of users) {
-    const li = document.createElement("li");
-    li.innerText = user.name;
-    userContainer.appendChild(li);
-  }
+ for(const user of users){
+  const div=document.createElement("div");
+  div.classList.add("card");
+  div.innerHTML=`
+  <div>  <p>${user.id}</p>
+  <p>${user.name}</p>
+  <p>${user.company.name}</p>
+  <p>${user.email}</p>
+  </div>
+
+  `
+  container.appendChild(div)
+ }
 };
